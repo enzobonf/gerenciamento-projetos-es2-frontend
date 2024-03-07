@@ -1,0 +1,27 @@
+.card {
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+
+
+  .content {
+      padding: 10px;
+      cursor: pointer;
+      flex: 1;
+      display: flex;
+
+      align-items: center;
+
+
+      .titulo {
+          color: #646468;
+          margin-left: 10px;
+      }
+
+      .icon {
+          color: #005b44;
+      }
+
+  }
+}

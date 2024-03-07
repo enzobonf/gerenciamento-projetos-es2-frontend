@@ -1,0 +1,217 @@
+
+
+.drawer {
+  max-width: 100px;
+  flex:1;
+
+  display:flex !important;
+  flex-direction: column !important;
+  background-color: #005b44;
+  padding: 0 !important;
+
+  justify-content: space-between !important;
+
+
+  border: none;
+  box-shadow: 0 0 1em #012851;
+
+  .drawer-items {
+    height: 100%;
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+
+
+    .menus-usuario {
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      background-color: yellow;
+    }
+
+    .menu-item:hover {
+      background-color: #005b44;
+    }
+
+    .menu-item {
+
+      background-color: #005b44;
+      border: none;
+
+      padding: 10px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      //border-left: 6px solid #012851;
+      //padding-left: -6px;
+
+      .icon {
+        //color: #005b44;
+        color: #ffffff90;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 1.2rem;
+
+        color: #6d7888;
+        max-width: 80px;
+        white-space: nowrap;
+
+      }
+
+      cursor: pointer;
+
+    }
+
+    .menu-item-selected {
+
+
+      border-left: 6px solid #002a20;
+      color: white;
+
+      .icon {
+        margin-left: -6px;
+        color: white !important;
+      }
+
+      span {
+        margin-left: -6px;
+        color: white !important;
+      }
+
+    }
+
+
+    .item-1 {
+      flex: 1;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content:center !important;
+
+    }
+
+    .logo {
+      //position: absolute;
+      //bottom: 0;
+      margin: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+      background-color: #012851;
+      border-radius: 50px;
+      padding: 10px;
+
+    }
+
+  }
+
+}
+
+
+.loading-ok {
+  //background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin-top: 0px;
+  z-index: 100;
+}
+
+
+
+header {
+background-color: white;
+min-height: 40px;
+border-bottom: 1px solid #dfe1eb;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 15px 30px 15px 30px;
+
+
+position: sticky;
+position: -webkit-sticky; /* For macOS/iOS Safari */
+top: 0; /* Sets the sticky toolbar to be on top */
+z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+
+
+.icon {
+  cursor: pointer;
+  //background-color:red;
+  color: #005b44;
+}
+
+.infos {
+
+  display: flex;
+  align-items: center;
+
+  .notice {
+      margin-right: 10px;
+      color: #005b44
+
+  }
+
+  .user {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #f3f5fb;
+    padding: 8px;
+    border-radius: 15px;
+    //font-weight: bold;
+    color: #005b44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      background-color: white;
+      padding: 1px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+
+    span{
+      max-width: 160px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-left: 5px;
+    }
+
+    @media (max-width: 600px){
+      span{
+        max-width: 60px;
+      }
+    }
+
+  }
+
+}
+}
+
+
+
+@media (max-width:600px){
+  header {
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+}
+
+
+mat-sidenav-content {
+  background-color: #f2f2f2;
+}

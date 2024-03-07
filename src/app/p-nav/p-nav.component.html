@@ -1,0 +1,57 @@
+<mat-sidenav-container
+  class="example-container background-fundo-sistema"
+  fullscreen>
+  <mat-sidenav
+    [(opened)]="menu_lateral"
+    class="html-size col-12 col-sm-4 col-lg-2 drawer text-font"
+    #sidenav
+    mode="side">
+    <div class="drawer-items">
+      <div class="item-1">
+        <div class="menus-usuario">
+          <button
+            *ngFor="let menu of menus"
+            class="menu-item"
+            [routerLink]="[menu.link]"
+            routerLinkActive="menu-item-selected"
+            (click)="getVoltar() ? sidenav.toggle() : false"
+            matRipple>
+            <i class="material-icons icon">{{ menu.icon }}</i>
+            <span style="color: #757575">{{ menu.nome }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="background-fundo-sistema">
+    <header>
+      <mat-icon
+        class="icon"
+        matRipple
+        (click)="sidenav.toggle()"
+        aria-hidden="false"
+        >menu</mat-icon
+      >
+
+      <div class="infos nao-selecionar">
+        <span [matMenuTriggerFor]="menu" class="user text" matRipple>
+          <mat-icon class="icon" aria-hidden="false">person</mat-icon>
+
+          <span>{{ nome_usuario }}</span>
+        </span>
+
+        <mat-menu #menu="matMenu">
+          <button (click)="logout()" mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Sair</span>
+          </button>
+        </mat-menu>
+      </div>
+    </header>
+
+      <div class="row col-padding">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

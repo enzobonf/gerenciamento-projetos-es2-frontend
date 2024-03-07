@@ -1,0 +1,142 @@
+[
+  {
+    "nro_ticket": 9627,
+    "data_abertura": "2023-03-07T13:03:53.873Z",
+    "empresa": {
+      "id": 8,
+      "nome": "Costa, Batista e Macedo"
+    },
+    "software": {
+      "id": 1,
+      "nome": "Photoshop",
+      "sigla": "PS",
+      "versao": {
+        "data": "2021-08-16",
+        "versao": "22.5.2",
+        "analista": {
+          "id": 1,
+          "nome": "Lucas Oliveira",
+          "email": "lucas.oliveira@example.com"
+        },
+        "status": {
+          "id": 2,
+          "nome": "Em desenvolvimento"
+        }
+      }
+    },
+    "descricao": "Placeat nihil deserunt modi sunt quo placeat deleniti.",
+    "tipo_manutencao": {
+      "id": 1,
+      "nome": "Erro"
+    },
+    "status": {
+      "id": 2,
+      "nome": "Realizado"
+    }
+  },
+  {
+    "nro_ticket": 9668,
+    "data_abertura": "2023-03-08T01:23:34.248Z",
+    "empresa": {
+      "id": 1,
+      "nome": "Saraiva LTDA"
+    },
+    "software": {
+      "id": 1,
+      "nome": "Photoshop",
+      "sigla": "PS",
+      "versao": {
+        "data": "2021-08-16",
+        "versao": "22.5.2",
+        "analista": {
+          "id": 1,
+          "nome": "Lucas Oliveira",
+          "email": "lucas.oliveira@example.com"
+        },
+        "status": {
+          "id": 2,
+          "nome": "Em desenvolvimento"
+        }
+      }
+    },
+    "descricao": "Laudantium qui pariatur.",
+    "tipo_manutencao": {
+      "id": 1,
+      "nome": "Erro"
+    },
+    "status": {
+      "id": 3,
+      "nome": "Cancelado"
+    }
+  },
+  {
+    "nro_ticket": 7154,
+    "data_abertura": "2023-03-07T08:37:13.755Z",
+    "empresa": {
+      "id": 6,
+      "nome": "Batista, Xavier e Macedo"
+    },
+    "software": {
+      "id": 2,
+      "nome": "Microsoft Word",
+      "sigla": "MSW",
+      "versao": {
+        "data": "2021-10-10",
+        "versao": "16.42",
+        "analista": {
+          "id": 3,
+          "nome": "Mariana Silva",
+          "email": "mariana.silva@example.com"
+        },
+        "status": {
+          "id": 2,
+          "nome": "Em desenvolvimento"
+        }
+      }
+    },
+    "descricao": "Possimus pariatur iure a sunt.",
+    "tipo_manutencao": {
+      "id": 2,
+      "nome": "Evolução de Funcionalidade"
+    },
+    "status": {
+      "id": 1,
+      "nome": "Em desenvolvimento"
+    }
+  },
+  {
+    "nro_ticket": 8470,
+    "data_abertura": "2023-03-07T05:53:43.866Z",
+    "empresa": {
+      "id": 9,
+      "nome": "Costa e Associados"
+    },
+    "software": {
+      "id": 3,
+      "nome": "Google Chrome",
+      "sigla": "GC",
+      "versao": {
+        "data": "2021-11-23",
+        "versao": "96.0.4664.45",
+        "analista": {
+          "id": 2,
+          "nome": "Fernanda Santos",
+          "email": "fernanda.santos@example.com"
+        },
+        "status": {
+          "id": 1,
+          "nome": "Disponível"
+        }
+      }
+    },
+    "descricao": "Sit eum ipsum veniam iste.",
+    "tipo_manutencao": {
+      "id": 1,
+      "nome": "Erro"
+    },
+    "status": {
+      "id": 3,
+      "nome": "Cancelado"
+    }
+  }
+]

@@ -1,0 +1,11 @@
+<div
+  mat-button
+  class="card nao-selecionar"
+  [ngClass]="{ selected: selected, notSelected: !selected }">
+  <div class="content" matRipple>
+    <mat-icon [ngStyle]="{ color: '#005b44' }">{{
+      selected ? 'check_circle' : 'radio_button_unchecked'
+    }}</mat-icon>
+    <span class="titulo text-font">{{ titulo }}</span>
+  </div>
+</div>

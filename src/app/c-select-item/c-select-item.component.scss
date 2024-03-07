@@ -1,0 +1,47 @@
+.card {
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    display: flex;
+
+    .content {
+        padding: 10px;
+        cursor: pointer;
+        flex: 1;
+        display: flex;
+
+        align-items: center;
+
+
+        .titulo {
+            color: #646468;
+            margin-left: 10px;
+        }
+
+        .circulo {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .icon {
+            color: #003366;
+            font-size: 30px;
+
+        }
+
+    }
+}
+
+.selected {
+    background-color: rgba(0, 51, 102, 0.08);
+    border: 1px solid rgba(0, 51, 102, 0.04);
+  }
+
+  .notSelected {
+    border: 1px solid #ccc;
+  }

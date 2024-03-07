@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>
+  {{ isNew ? 'Novo contrato' : 'Editar contrato' }}
+</h2>
+
+<mat-dialog-content class="text-font">
+  <form [formGroup]="form" class="form" autocomplete="off">
+    <div class="row">
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-6">
+        <mat-select
+          placeholder="Empresa"
+          formControlName="id_empresa">
+          <mat-option *ngFor="let item of empresas" [value]="item.id">
+            {{ item.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-6">
+        <mat-select
+          placeholder="Software"
+          formControlName="id_software">
+          <mat-option *ngFor="let item of softwares" [value]="item.id">
+            {{ item.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field
+        color="accent"
+        class="col-12 col-sm-6 col-lg-8"
+        (click)="picker.open()">
+        <input
+          matInput
+          formControlName="data_contratacao"
+          [matDatepicker]="picker"
+          placeholder="Data"
+          [disabled]="true" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker [disabled]="!isNew"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-4">
+        <mat-select
+          placeholder="Status do contrato"
+          formControlName="id_status_contrato">
+          <mat-option *ngFor="let item of all_status" [value]="item.id">
+            {{ item.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+  <button
+    mat-button
+    cdkFocusInitial
+    [disabled]="this.form.invalid"
+    (click)="onSubmit()">
+    Salvar
+  </button>
+</mat-dialog-actions>

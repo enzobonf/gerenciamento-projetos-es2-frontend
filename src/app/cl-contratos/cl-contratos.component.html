@@ -1,0 +1,85 @@
+<div class="col-12 header">
+  <span class="titulo">Contratos</span>
+
+  <div class="buttons" [hidden]="!showButtons">
+    <button mat-stroked-button (click)="openDialogFormContrato()">
+      <mat-icon>add</mat-icon>
+      <span>Adicionar nova contrato</span>
+    </button>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="row">
+    <table class="col-12" mat-table [dataSource]="contratos">
+      <ng-container matColumnDef="nome_empresa">
+        <th mat-header-cell *matHeaderCellDef>Empresa</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.empresa.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome_software">
+        <th mat-header-cell *matHeaderCellDef>Software</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.software.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef>N° Contrato</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.nro_contrato }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="data">
+        <th mat-header-cell *matHeaderCellDef>Data</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.data_formatted }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="representante">
+        <th mat-header-cell *matHeaderCellDef>Representante Empresa</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.empresa.usuario.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let contrato">
+          {{ contrato.status_contrato.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="editar">
+        <th [hidden]="!showButtons" style="width: 5vw" mat-header-cell *matHeaderCellDef></th>
+        <td [hidden]="!showButtons" style="width: 5vw" mat-cell *matCellDef="let contrato">
+          <button
+            mat-button
+            (click)="openDialogFormContrato(contrato)"
+            style="color: #005b44">
+            Editar
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="excluir">
+        <th [hidden]="!showButtons" style="width: 5vw" mat-header-cell *matHeaderCellDef></th>
+        <td [hidden]="!showButtons" style="width: 5vw" mat-cell *matCellDef="let contrato">
+          <button
+            mat-button
+            (click)="clickExcluir(contrato)"
+            style="color: red">
+            Excluir
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
