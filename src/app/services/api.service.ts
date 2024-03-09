@@ -19,6 +19,52 @@ export class ApiService {
   private api = environment.API_URL;
   constructor(private http: HttpClient) {}
 
+  async obterProfissionais() {
+    return firstValueFrom(
+      this.http.get<any>(this.api + '/profissional').pipe(take(1))
+    );
+  }
+
+  async cadastrarProfissional(profissional: any) {
+    return firstValueFrom(
+      this.http
+        .post<any>(this.api + '/profissional', profissional)
+        .pipe(take(1))
+    );
+  }
+
+  async editarProfissional(id_profissional: number, profissional: any) {
+    return firstValueFrom(
+      this.http
+        .patch<any>(this.api + `/profissional/${id_profissional}`, profissional)
+        .pipe(take(1))
+    );
+  }
+
+  async removerProfissional(id_profissional: number) {
+    return firstValueFrom(
+      this.http
+        .delete<any>(this.api + `/profissional/${id_profissional}`)
+        .pipe(take(1))
+    );
+  }
+
+  async obterGeneros() {
+    return firstValueFrom(
+      this.http.get<any>(this.api + '/genero').pipe(take(1))
+    );
+  }
+
+  async obterEspecialidades() {
+    return firstValueFrom(
+      this.http.get<any>(this.api + '/especialidade').pipe(take(1))
+    );
+  }
+
+  async obterRacas() {
+    return firstValueFrom(this.http.get<any>(this.api + '/raca').pipe(take(1)));
+  }
+
   async getSoftwares() {
     return firstValueFrom(
       this.http.get<any>(this.api + '/softwares').pipe(take(1))
