@@ -47,7 +47,7 @@ export class ClProfissionaisComponent implements OnInit {
   async getProfissionais() {
     this.setLoading(true);
     try {
-      const { profissionais }: any = await this.apiService.getProfissionais();
+      const { profissionais }: any = await this.apiService.obterProfissionais();
       this.profissionais = profissionais;
       this.setLoading(false);
     } catch (err) {
@@ -58,6 +58,7 @@ export class ClProfissionaisComponent implements OnInit {
 
   openDialogFormProfissional(profissional?: Profissional) {
     const dialogRef = this.dialog.open(CProfissionalFormComponent, {
+      width: '800px',
       disableClose: true,
       data: {
         profissional,
@@ -102,7 +103,7 @@ export class ClProfissionaisComponent implements OnInit {
     this.setLoading(true);
 
     try {
-      await this.apiService.deleteProfissional(id_profissional);
+      await this.apiService.removerProfissional(id_profissional);
       this.profissionais = this.profissionais.filter(
         x => x.id !== id_profissional
       );

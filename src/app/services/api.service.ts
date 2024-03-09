@@ -65,6 +65,12 @@ export class ApiService {
     return firstValueFrom(this.http.get<any>(this.api + '/raca').pipe(take(1)));
   }
 
+  async obterEnderecoPorCEP(cep: string) {
+    return firstValueFrom(
+      this.http.get<any>(this.api + `/enderecos/cep/${cep}`).pipe(take(1))
+    );
+  }
+
   async getSoftwares() {
     return firstValueFrom(
       this.http.get<any>(this.api + '/softwares').pipe(take(1))
