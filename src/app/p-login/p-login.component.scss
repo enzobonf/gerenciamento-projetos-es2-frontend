@@ -6,7 +6,7 @@
 .pagina-login {
   //width: 100%;
   height: 100vh;
-  background-color: #005b44;
+  background-color: #303f9f;
 
   display: flex;
   align-items: center;
@@ -23,10 +23,8 @@
     padding: 30px 10px 30px 10px;
 
     display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
-
-
 }

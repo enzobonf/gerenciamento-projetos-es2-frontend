@@ -4,24 +4,21 @@
   border: 1px solid #ccc;
   display: flex;
 
-
   .content {
-      padding: 10px;
-      cursor: pointer;
-      flex: 1;
-      display: flex;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
 
-      align-items: center;
+    align-items: center;
 
+    .titulo {
+      color: #646468;
+      margin-left: 10px;
+    }
 
-      .titulo {
-          color: #646468;
-          margin-left: 10px;
-      }
-
-      .icon {
-          color: #005b44;
-      }
-
+    .icon {
+      color: #303f9f;
+    }
   }
 }

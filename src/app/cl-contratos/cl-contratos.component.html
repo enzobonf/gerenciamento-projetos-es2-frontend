@@ -55,20 +55,36 @@
       </ng-container>
 
       <ng-container matColumnDef="editar">
-        <th [hidden]="!showButtons" style="width: 5vw" mat-header-cell *matHeaderCellDef></th>
-        <td [hidden]="!showButtons" style="width: 5vw" mat-cell *matCellDef="let contrato">
+        <th
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-header-cell
+          *matHeaderCellDef></th>
+        <td
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-cell
+          *matCellDef="let contrato">
           <button
             mat-button
             (click)="openDialogFormContrato(contrato)"
-            style="color: #005b44">
+            style="color: #303f9f">
             Editar
           </button>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="excluir">
-        <th [hidden]="!showButtons" style="width: 5vw" mat-header-cell *matHeaderCellDef></th>
-        <td [hidden]="!showButtons" style="width: 5vw" mat-cell *matCellDef="let contrato">
+        <th
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-header-cell
+          *matHeaderCellDef></th>
+        <td
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-cell
+          *matCellDef="let contrato">
           <button
             mat-button
             (click)="clickExcluir(contrato)"
