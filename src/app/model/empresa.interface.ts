@@ -1,3 +1,5 @@
+import { Endereco } from './endereco.interface';
+
 export interface Telefone {
   id: number;
   numero: string;
@@ -21,17 +23,7 @@ export interface Empresa {
   id: number;
   nome: string;
   cnpj: string;
-  endereco: {
-    tipo_logradouro: string;
-    logradouro: string;
-    numero: number;
-    bairro?: string;
-    cidade: string;
-    uf: string;
-    sigla_uf?: string;
-    pais: string;
-    cep: string;
-  };
+  endereco: Endereco;
   fones: Telefone[];
   emails: Email[];
   usuario_chave: UsuarioChave;

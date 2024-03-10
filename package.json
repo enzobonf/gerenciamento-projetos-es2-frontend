@@ -1,5 +1,5 @@
 {
-  "name": "t2-es1",
+  "name": "t1-es2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.3",
     "firebase": "^9.18.0",
     "moment": "^2.29.4",
+    "ngx-mask": "^15.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

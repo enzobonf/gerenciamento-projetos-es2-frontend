@@ -16,7 +16,15 @@ export class AppService {
     private memory: LocalstorageService
   ) {}
 
-  private auth = {
+  private auth: {
+    id_usuario: number;
+    id_tipo_usuario: number;
+
+    isLogged: boolean;
+    token_auth: string;
+
+    usuario: firebase.default.User | undefined;
+  } = {
     id_usuario: -1,
     id_tipo_usuario: -1,
 
@@ -57,7 +65,6 @@ export class AppService {
   }
 
   logout() {
-    console.log(this.auth);
     if (this.auth.token_auth) {
       this.memory.cadastrarInformacao(this.memory.tag_tokenAuth, 'null');
 
@@ -68,10 +75,10 @@ export class AppService {
         token_auth: '',
         usuario: undefined,
       };
-
       this.alteracaoLogin.emit(this.auth.isLogged);
-      this._router.navigate(['/login']);
     }
+
+    this._router.navigate(['/login']);
   }
 
   getAuthToken() {
@@ -79,7 +86,7 @@ export class AppService {
   }
 
   getNomeUsuario() {
-    return this.auth.usuario?.nome || '';
+    return this.auth.usuario?.email || '';
   }
 
   getIdTipoUsuario() {
@@ -88,14 +95,6 @@ export class AppService {
 
   isAuthorized() {
     return this.auth.isLogged;
-  }
-
-  isGerente() {
-    return this.auth.isLogged && this.auth.id_tipo_usuario === Role.GERENTE;
-  }
-
-  isAnalista() {
-    return this.auth.isLogged && this.auth.id_tipo_usuario === Role.ANALISTA;
   }
 
   setLoading(loading: boolean) {

@@ -8,6 +8,7 @@ import { PHomeComponent } from './p-home/p-home.component';
 import { PLoginComponent } from './p-login/p-login.component';
 import { PNavComponent } from './p-nav/p-nav.component';
 import { PSoftwaresComponent } from './p-softwares/p-softwares.component';
+import { PProfissionaisComponent } from './p-profissionais/p-profissionais.component';
 
 const routes: Routes = [
   {
@@ -29,8 +30,8 @@ const routes: Routes = [
         component: PHomeComponent,
       },
       {
-        path: 'softwares',
-        component: PSoftwaresComponent,
+        path: 'profissionais',
+        component: PProfissionaisComponent,
       },
       {
         path: 'empresas',

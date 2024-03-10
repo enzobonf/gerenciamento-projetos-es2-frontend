@@ -34,6 +34,16 @@ import { environment } from 'src/environments/environment';
 import { PLoginComponent } from './p-login/p-login.component';
 import { PGetInfoComponent } from './p-get-info/p-get-info.component';
 import { InterceptionHttpService } from './services/interception-http.service';
+import { PProfissionaisComponent } from './p-profissionais/p-profissionais.component';
+import { ClProfissionaisComponent } from './cl-profissionais/cl-profissionais.component';
+import { CProfissionalFormComponent } from './c-profissional-form/c-profissional-form.component';
+import {
+  NgxMaskDirective,
+  NgxMaskPipe,
+  provideEnvironmentNgxMask,
+  provideNgxMask,
+} from 'ngx-mask';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -60,6 +70,9 @@ import { InterceptionHttpService } from './services/interception-http.service';
     CChamadoFormComponent,
     PLoginComponent,
     PGetInfoComponent,
+    PProfissionaisComponent,
+    ClProfissionaisComponent,
+    CProfissionalFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +84,8 @@ import { InterceptionHttpService } from './services/interception-http.service';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
   providers: [
     {
@@ -78,6 +93,11 @@ import { InterceptionHttpService } from './services/interception-http.service';
       useClass: InterceptionHttpService,
       multi: true,
     },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { floatLabel: 'always' },
+    },
+    provideNgxMask(),
   ],
   bootstrap: [AppComponent],
 })
