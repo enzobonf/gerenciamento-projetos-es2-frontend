@@ -47,6 +47,9 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { ClTimesComponent } from './cl-times/cl-times.component';
 import { PTimesComponent } from './p-times/p-times.component';
 import { CTimeFormComponent } from './c-time-form/c-time-form.component';
+import { COpenFilterButtonComponent } from './c-open-filter-button/c-open-filter-button.component';
+import { ClProfissionalSelectModalComponent } from './cl-profissional-select-modal/cl-profissional-select-modal.component';
+import { CProfissionalSelectItemComponent } from './c-profissional-select-item/c-profissional-select-item.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +82,9 @@ import { CTimeFormComponent } from './c-time-form/c-time-form.component';
     ClTimesComponent,
     PTimesComponent,
     CTimeFormComponent,
+    COpenFilterButtonComponent,
+    ClProfissionalSelectModalComponent,
+    CProfissionalSelectItemComponent,
   ],
   imports: [
     BrowserModule,

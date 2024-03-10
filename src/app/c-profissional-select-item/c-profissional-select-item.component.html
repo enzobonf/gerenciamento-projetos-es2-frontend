@@ -1,0 +1,25 @@
+<div
+  class="proprietario nao-selecionar maozinha"
+  matRipple
+  (click)="click()"
+  [ngClass]="{ selected: selected, notSelected: !selected }">
+  <div class="icon">
+    <mat-icon [ngStyle]="{ color: '#003366' }">{{
+      selected ? 'check_circle' : 'check_circle_outlined'
+    }}</mat-icon>
+  </div>
+  <div class="content">
+    <div class="header">
+      <span
+        class="text-font"
+        *ngIf="id === -1"
+        [ngStyle]="{ color: '#003366' }"
+        >{{ nome }}</span
+      >
+      <span class="text-font" *ngIf="id !== -1" [ngStyle]="{ color: '#003366' }"
+        >{{ id }} - {{ nome }} {{ sobrenome }}</span
+      >
+    </div>
+    <span class="text-op">{{ nome_especialidade }}</span>
+  </div>
+</div>

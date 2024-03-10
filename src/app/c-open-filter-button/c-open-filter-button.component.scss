@@ -1,0 +1,42 @@
+.selected {
+  background-color: rgba(0, 51, 102, 0.08);
+  border: 1px solid rgba(0, 51, 102, 0.04);
+}
+
+.notSelected {
+  border: 1px solid #ccc;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 4px;
+
+  padding: 5px 10px;
+
+  margin-bottom: 10px;
+
+  span {
+    text-overflow: ellipsis;
+  }
+}
+
+.title {
+  color: rgba(0, 0, 0, 0.54);
+
+  margin-bottom: 0px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.icon {
+  margin-right: 5px;
+  color: #7a7a80;
+}

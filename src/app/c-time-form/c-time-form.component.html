@@ -1,1 +1,49 @@
-<p>c-time-form works!</p>
+<h2 mat-dialog-title>
+  {{ isNew ? 'Novo time' : 'Editar time' }}
+</h2>
+
+<mat-dialog-content class="text-font">
+  <form [formGroup]="form" class="form" autocomplete="off">
+    <div class="row">
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-12">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" formControlName="nome" />
+
+        <mat-error *ngIf="form.get('nome')?.hasError('required')">
+          Nome é obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <span class="label" style="margin-bottom: 10px">Profissionais:</span>
+      <div class="col-12">
+        <c-open-filter-button
+          [title]="'Adicionar'"
+          (handleClick)="openDialogSelectProfissionais()"
+          [value]="profissionais_str"></c-open-filter-button>
+      </div>
+
+      <!-- <span class="label">Tecnologias:</span>
+      <div class="col-12 col-sm-6 col-lg-3" *ngFor="let item of tecnologias">
+        <c-select-item
+          [titulo]="item.nome"
+          [selected]="item.selected"
+          (click)="item.selected = !item.selected">
+        </c-select-item>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <c-add-item (click)="clickAddTecnologia()"> </c-add-item>
+      </div> -->
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+  <button
+    mat-button
+    cdkFocusInitial
+    [disabled]="this.form.invalid"
+    (click)="onSubmit()">
+    Salvar
+  </button>
+</mat-dialog-actions>
