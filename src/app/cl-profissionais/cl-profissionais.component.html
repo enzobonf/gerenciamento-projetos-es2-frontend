@@ -47,7 +47,9 @@
           {{ profissional.endereco.tipo_logradouro }}
           {{ profissional.endereco.logradouro }},
           {{ profissional.numero_endereco }},
-          {{ profissional.complemento_endereco }}
+          <span *ngIf="profissional.complemento_endereco"
+            >{{ profissional.complemento_endereco }},</span
+          >
           {{ profissional.endereco.bairro }} <br />
           {{ profissional.endereco.cidade }} -
           {{ profissional.endereco.sigla_uf }},
