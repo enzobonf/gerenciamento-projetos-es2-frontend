@@ -44,6 +44,9 @@ import {
   provideNgxMask,
 } from 'ngx-mask';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { ClTimesComponent } from './cl-times/cl-times.component';
+import { PTimesComponent } from './p-times/p-times.component';
+import { CTimeFormComponent } from './c-time-form/c-time-form.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +76,9 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     PProfissionaisComponent,
     ClProfissionaisComponent,
     CProfissionalFormComponent,
+    ClTimesComponent,
+    PTimesComponent,
+    CTimeFormComponent,
   ],
   imports: [
     BrowserModule,
