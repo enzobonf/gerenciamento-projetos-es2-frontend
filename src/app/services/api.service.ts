@@ -67,7 +67,7 @@ export class ApiService {
 
   async obterEnderecoPorCEP(cep: string) {
     return firstValueFrom(
-      this.http.get<any>(this.api + `/enderecos/cep/${cep}`).pipe(take(1))
+      this.http.get<any>(this.api + `/endereco/cep/${cep}`).pipe(take(1))
     );
   }
 

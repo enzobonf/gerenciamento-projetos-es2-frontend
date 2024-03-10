@@ -33,9 +33,9 @@ export class ClProfissionaisComponent implements OnInit {
   displayedColumns: string[] = [
     'nome',
     'email',
+    'especialidade',
     'telefone',
     'endereco',
-    'especialidade',
     'editar',
     'excluir',
   ];
@@ -58,7 +58,7 @@ export class ClProfissionaisComponent implements OnInit {
 
   openDialogFormProfissional(profissional?: Profissional) {
     const dialogRef = this.dialog.open(CProfissionalFormComponent, {
-      width: '800px',
+      width: '950px',
       disableClose: true,
       data: {
         profissional,

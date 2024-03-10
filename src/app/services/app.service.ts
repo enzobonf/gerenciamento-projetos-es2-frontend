@@ -65,7 +65,6 @@ export class AppService {
   }
 
   logout() {
-    console.log(this.auth);
     if (this.auth.token_auth) {
       this.memory.cadastrarInformacao(this.memory.tag_tokenAuth, 'null');
 
@@ -76,10 +75,10 @@ export class AppService {
         token_auth: '',
         usuario: undefined,
       };
-
       this.alteracaoLogin.emit(this.auth.isLogged);
-      this._router.navigate(['/login']);
     }
+
+    this._router.navigate(['/login']);
   }
 
   getAuthToken() {

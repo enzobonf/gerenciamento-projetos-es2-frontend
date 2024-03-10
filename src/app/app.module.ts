@@ -43,6 +43,7 @@ import {
   provideEnvironmentNgxMask,
   provideNgxMask,
 } from 'ngx-mask';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,10 @@ import {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptionHttpService,
       multi: true,
+    },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { floatLabel: 'always' },
     },
     provideNgxMask(),
   ],
