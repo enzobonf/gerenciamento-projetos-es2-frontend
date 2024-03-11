@@ -10,6 +10,7 @@ import { PNavComponent } from './p-nav/p-nav.component';
 import { PSoftwaresComponent } from './p-softwares/p-softwares.component';
 import { PProfissionaisComponent } from './p-profissionais/p-profissionais.component';
 import { PTimesComponent } from './p-times/p-times.component';
+import { PProjetosComponent } from './p-projetos/p-projetos.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'times',
         component: PTimesComponent,
+      },
+      {
+        path: 'projetos',
+        component: PProjetosComponent,
       },
       {
         path: 'empresas',

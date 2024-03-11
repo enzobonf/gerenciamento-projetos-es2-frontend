@@ -19,6 +19,12 @@ export class ApiService {
   private api = environment.API_URL;
   constructor(private http: HttpClient) {}
 
+  async obterClientes() {
+    return firstValueFrom(
+      this.http.get<any>(this.api + '/cliente').pipe(take(1))
+    );
+  }
+
   async obterProfissionais() {
     return firstValueFrom(
       this.http.get<any>(this.api + '/profissional').pipe(take(1))
@@ -87,9 +93,37 @@ export class ApiService {
     );
   }
 
-  async removerTime(id_profissional: number) {
+  async removerTime(id_time: number) {
     return firstValueFrom(
-      this.http.delete<any>(this.api + `/time/${id_profissional}`).pipe(take(1))
+      this.http.delete<any>(this.api + `/time/${id_time}`).pipe(take(1))
+    );
+  }
+
+  async obterProjetos() {
+    return firstValueFrom(
+      this.http.get<any>(this.api + '/projeto').pipe(take(1))
+    );
+  }
+
+  async cadastrarProjeto(projeto: any) {
+    return firstValueFrom(
+      this.http.post<any>(this.api + '/projeto', projeto).pipe(take(1))
+    );
+  }
+
+  async editarProjeto(id_projeto: number, projeto: any) {
+    return firstValueFrom(
+      this.http
+        .patch<any>(this.api + `/projeto/${id_projeto}`, projeto)
+        .pipe(take(1))
+    );
+  }
+
+  async removerProjeto(id_profissional: number) {
+    return firstValueFrom(
+      this.http
+        .delete<any>(this.api + `/projeto/${id_profissional}`)
+        .pipe(take(1))
     );
   }
 

@@ -51,6 +51,9 @@ import { COpenFilterButtonComponent } from './c-open-filter-button/c-open-filter
 import { ClProfissionalSelectModalComponent } from './cl-profissional-select-modal/cl-profissional-select-modal.component';
 import { CProfissionalSelectItemComponent } from './c-profissional-select-item/c-profissional-select-item.component';
 import { CTimeProfissionaisComponent } from './c-time-profissionais/c-time-profissionais.component';
+import { PProjetosComponent } from './p-projetos/p-projetos.component';
+import { ClProjetosComponent } from './cl-projetos/cl-projetos.component';
+import { CProjetoFormComponent } from './c-projeto-form/c-projeto-form.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +90,9 @@ import { CTimeProfissionaisComponent } from './c-time-profissionais/c-time-profi
     ClProfissionalSelectModalComponent,
     CProfissionalSelectItemComponent,
     CTimeProfissionaisComponent,
+    PProjetosComponent,
+    ClProjetosComponent,
+    CProjetoFormComponent,
   ],
   imports: [
     BrowserModule,

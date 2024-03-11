@@ -43,14 +43,9 @@ export class PNavComponent {
         icon: 'groups',
       },
       {
-        nome: 'Contratos',
-        link: '/contratos',
-        icon: 'edit_document',
-      },
-      {
-        nome: 'Chamados',
-        link: '/chamados',
-        icon: 'notification_important',
+        nome: 'Projetos',
+        link: '/projetos',
+        icon: 'folder',
       },
     ];
   }
