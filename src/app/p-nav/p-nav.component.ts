@@ -21,6 +21,7 @@ export class PNavComponent {
 
   ngOnInit(): void {
     this.nome_usuario = this.appService.getNomeUsuario();
+    console.log(this.nome_usuario);
     this.setMenus();
   }
 
@@ -32,24 +33,19 @@ export class PNavComponent {
         icon: 'home',
       },
       {
-        nome: 'Softwares',
-        link: '/softwares',
-        icon: 'terminal',
+        nome: 'Profissionais',
+        link: '/profissionais',
+        icon: 'person',
       },
       {
-        nome: 'Empresas',
-        link: '/empresas',
-        icon: 'apartment',
+        nome: 'Times',
+        link: '/times',
+        icon: 'groups',
       },
       {
-        nome: 'Contratos',
-        link: '/contratos',
-        icon: 'edit_document',
-      },
-      {
-        nome: 'Chamados',
-        link: '/chamados',
-        icon: 'notification_important',
+        nome: 'Projetos',
+        link: '/projetos',
+        icon: 'folder',
       },
     ];
   }

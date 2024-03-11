@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './guards/auth-guard.service';
-import { PChamadosComponent } from './p-chamados/p-chamados.component';
-import { PContratosComponent } from './p-contratos/p-contratos.component';
-import { PEmpresasComponent } from './p-empresas/p-empresas.component';
 import { PHomeComponent } from './p-home/p-home.component';
 import { PLoginComponent } from './p-login/p-login.component';
 import { PNavComponent } from './p-nav/p-nav.component';
-import { PSoftwaresComponent } from './p-softwares/p-softwares.component';
+import { PProfissionaisComponent } from './p-profissionais/p-profissionais.component';
+import { PTimesComponent } from './p-times/p-times.component';
+import { PProjetosComponent } from './p-projetos/p-projetos.component';
 
 const routes: Routes = [
   {
@@ -29,20 +28,16 @@ const routes: Routes = [
         component: PHomeComponent,
       },
       {
-        path: 'softwares',
-        component: PSoftwaresComponent,
+        path: 'profissionais',
+        component: PProfissionaisComponent,
       },
       {
-        path: 'empresas',
-        component: PEmpresasComponent,
+        path: 'times',
+        component: PTimesComponent,
       },
       {
-        path: 'contratos',
-        component: PContratosComponent,
-      },
-      {
-        path: 'chamados',
-        component: PChamadosComponent,
+        path: 'projetos',
+        component: PProjetosComponent,
       },
     ],
   },

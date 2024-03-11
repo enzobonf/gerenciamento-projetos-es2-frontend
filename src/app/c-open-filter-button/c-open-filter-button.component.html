@@ -1,0 +1,14 @@
+<div
+  [ngClass]="{ selected: value || selected, notSelected: !value && !selected }"
+  class="button nao-selecionar maozinha"
+  matRipple
+  (click)="!disabled && onClick()"
+  [matRippleDisabled]="disabled ?? false">
+  <div class="title-wrapper">
+    <mat-icon class="icon material-icons-outlined" *ngIf="icon">{{
+      icon
+    }}</mat-icon>
+    <span class="text-font">{{ value ? value : title }} </span>
+  </div>
+  <mat-icon style="color: rgba(0, 0, 0, 0.575)"> arrow_drop_down </mat-icon>
+</div>

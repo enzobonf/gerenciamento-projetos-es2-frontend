@@ -1,0 +1,105 @@
+<div class="col-12 header">
+  <span class="titulo">Projetos</span>
+
+  <div class="buttons" [hidden]="!showButtons">
+    <button mat-stroked-button (click)="openDialogFormProjeto()">
+      <mat-icon>add</mat-icon>
+      <span>Adicionar nova projeto</span>
+    </button>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="row">
+    <table class="col-12" mat-table [dataSource]="projetos">
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome_cliente">
+        <th mat-header-cell *matHeaderCellDef>Cliente</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.cliente.nome }} {{ projeto.cliente.sobrenome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="objetivo">
+        <th mat-header-cell *matHeaderCellDef>Objetivo</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.objetivo }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="data_inicio">
+        <th mat-header-cell *matHeaderCellDef>Início</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.data_inicio_str }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="data_fim">
+        <th mat-header-cell *matHeaderCellDef>Término</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.data_fim_str }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef>Valor</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.valor_str }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef>Time responsável</th>
+        <td mat-cell *matCellDef="let projeto">
+          {{ projeto.time.nome }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="editar">
+        <th
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-header-cell
+          *matHeaderCellDef></th>
+        <td
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-cell
+          *matCellDef="let projeto">
+          <button
+            mat-button
+            (click)="openDialogFormProjeto(projeto)"
+            style="color: #303f9f">
+            Editar
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="excluir">
+        <th
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-header-cell
+          *matHeaderCellDef></th>
+        <td
+          [hidden]="!showButtons"
+          style="width: 5vw"
+          mat-cell
+          *matCellDef="let projeto">
+          <button mat-button (click)="clickExcluir(projeto)" style="color: red">
+            Excluir
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

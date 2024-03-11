@@ -17,7 +17,7 @@
             (click)="getVoltar() ? sidenav.toggle() : false"
             matRipple>
             <i class="material-icons icon">{{ menu.icon }}</i>
-            <span style="color: #757575">{{ menu.nome }}</span>
+            <span style="color: #c9c9c9">{{ menu.nome }}</span>
           </button>
         </div>
       </div>
@@ -50,8 +50,8 @@
       </div>
     </header>
 
-      <div class="row col-padding">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    <div class="row col-padding">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
