@@ -26,3 +26,5 @@ export interface PessoaFisica {
   genero: Genero;
   raca: Raca;
 }
+
+export type Cliente = PessoaFisica;

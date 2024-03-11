@@ -1,0 +1,106 @@
+<h2 mat-dialog-title>
+  {{ isNew ? 'Novo projeto' : 'Editar projeto' }}
+</h2>
+
+<mat-dialog-content class="text-font">
+  <form [formGroup]="form" class="form" autocomplete="off">
+    <div class="row">
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-5">
+        <mat-label>Nome do projeto</mat-label>
+        <input matInput type="text" formControlName="nome" />
+
+        <mat-error *ngIf="form.get('nome')?.hasError('required')">
+          Nome do projeto é obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-7">
+        <mat-label>Objetivo</mat-label>
+        <input matInput type="text" formControlName="objetivo" />
+
+        <mat-error *ngIf="form.get('objetivo')?.hasError('required')">
+          Objetivo é obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-6">
+        <mat-select placeholder="Cliente" formControlName="id_cliente">
+          <mat-option *ngFor="let item of clientes" [value]="item.id">
+            {{ item.nome }} {{ item.sobrenome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-sm-12 col-lg-6">
+        <mat-select
+          placeholder="Time responsável"
+          formControlName="id_time_responsavel">
+          <mat-option *ngFor="let item of times" [value]="item.id">
+            {{ item.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field
+        color="accent"
+        class="col-12 col-sm-6 col-lg-4"
+        (click)="pickerinicio.open()">
+        <input
+          matInput
+          formControlName="data_inicio"
+          [matDatepicker]="pickerinicio"
+          placeholder="Data de início"
+          [disabled]="true" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="pickerinicio"></mat-datepicker-toggle>
+        <mat-datepicker #pickerinicio></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field
+        color="accent"
+        class="col-12 col-sm-6 col-lg-4"
+        (click)="pickerfim.open()">
+        <input
+          matInput
+          formControlName="data_fim"
+          [matDatepicker]="pickerfim"
+          placeholder="Data de término"
+          [disabled]="true" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="pickerfim"></mat-datepicker-toggle>
+        <mat-datepicker #pickerfim></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="col-12 col-lg-4">
+        <mat-label>Valor</mat-label>
+        <input
+          matInput
+          type="text"
+          mask="0*,0*"
+          [dropSpecialCharacters]="false"
+          formControlName="valor"
+          required />
+
+        <mat-error *ngIf="form.get('valor').hasError('required')">
+          Valor Bruto é obrigatório.
+        </mat-error>
+        <mat-error *ngIf="form.get('valor').hasError('min')">
+          Valor Bruto é obrigatório.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+  <button
+    mat-button
+    cdkFocusInitial
+    [disabled]="this.form.invalid"
+    (click)="onSubmit()">
+    Salvar
+  </button>
+</mat-dialog-actions>

@@ -96,6 +96,7 @@ export class CTimeFormComponent {
 
   openDialogSelectProfissionais() {
     const dialogRef = this.dialog.open(ClProfissionalSelectModalComponent, {
+      minWidth: '400px',
       disableClose: true,
       data: {
         oldProfissionais: this.profissionais,

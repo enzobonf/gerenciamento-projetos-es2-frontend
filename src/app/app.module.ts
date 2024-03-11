@@ -6,26 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PHomeComponent } from './p-home/p-home.component';
 import { PNavComponent } from './p-nav/p-nav.component';
-import { PSoftwaresComponent } from './p-softwares/p-softwares.component';
 import { MMaterialAngularModule } from './m-material-angular/m-material-angular/m-material-angular.module';
-import { CSoftwareVersoesComponent } from './c-software-versoes/c-software-versoes.component';
-import { CSoftwareTecnologiasComponent } from './c-software-tecnologias/c-software-tecnologias.component';
-import { CSoftwareFormComponent } from './c-software-form/c-software-form.component';
 import { CSelectItemComponent } from './c-select-item/c-select-item.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CAddItemComponent } from './c-add-item/c-add-item.component';
 import { CDialogConfirmComponent } from './c-dialog-confirm/c-dialog-confirm.component';
-import { CSoftwareVersoesFormComponent } from './c-software-versoes-form/c-software-versoes-form.component';
-import { PEmpresasComponent } from './p-empresas/p-empresas.component';
-import { CEmpresaFormComponent } from './c-empresa-form/c-empresa-form.component';
-import { ClSoftwaresComponent } from './cl-softwares/cl-softwares.component';
-import { ClEmpresasComponent } from './cl-empresas/cl-empresas.component';
-import { ClContratosComponent } from './cl-contratos/cl-contratos.component';
-import { PContratosComponent } from './p-contratos/p-contratos.component';
-import { CContratoFormComponent } from './c-contrato-form/c-contrato-form.component';
-import { PChamadosComponent } from './p-chamados/p-chamados.component';
-import { ClChamadosComponent } from './cl-chamados/cl-chamados.component';
-import { CChamadoFormComponent } from './c-chamado-form/c-chamado-form.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -51,30 +36,18 @@ import { COpenFilterButtonComponent } from './c-open-filter-button/c-open-filter
 import { ClProfissionalSelectModalComponent } from './cl-profissional-select-modal/cl-profissional-select-modal.component';
 import { CProfissionalSelectItemComponent } from './c-profissional-select-item/c-profissional-select-item.component';
 import { CTimeProfissionaisComponent } from './c-time-profissionais/c-time-profissionais.component';
+import { PProjetosComponent } from './p-projetos/p-projetos.component';
+import { ClProjetosComponent } from './cl-projetos/cl-projetos.component';
+import { CProjetoFormComponent } from './c-projeto-form/c-projeto-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PHomeComponent,
     PNavComponent,
-    PSoftwaresComponent,
-    CSoftwareVersoesComponent,
-    CSoftwareTecnologiasComponent,
-    CSoftwareFormComponent,
     CSelectItemComponent,
     CAddItemComponent,
     CDialogConfirmComponent,
-    CSoftwareVersoesFormComponent,
-    PEmpresasComponent,
-    CEmpresaFormComponent,
-    ClSoftwaresComponent,
-    ClEmpresasComponent,
-    ClContratosComponent,
-    PContratosComponent,
-    CContratoFormComponent,
-    PChamadosComponent,
-    ClChamadosComponent,
-    CChamadoFormComponent,
     PLoginComponent,
     PGetInfoComponent,
     PProfissionaisComponent,
@@ -87,6 +60,9 @@ import { CTimeProfissionaisComponent } from './c-time-profissionais/c-time-profi
     ClProfissionalSelectModalComponent,
     CProfissionalSelectItemComponent,
     CTimeProfissionaisComponent,
+    PProjetosComponent,
+    ClProjetosComponent,
+    CProjetoFormComponent,
   ],
   imports: [
     BrowserModule,
