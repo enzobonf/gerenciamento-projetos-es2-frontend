@@ -11,6 +11,7 @@ import { CSoftwareFormComponent } from '../c-software-form/c-software-form.compo
 import { CDialogConfirmComponent } from '../c-dialog-confirm/c-dialog-confirm.component';
 import { Time } from '../model/time.interface';
 import { CTimeFormComponent } from '../c-time-form/c-time-form.component';
+import { CTimeProfissionaisComponent } from '../c-time-profissionais/c-time-profissionais.component';
 
 @Component({
   selector: 'cl-times',
@@ -54,7 +55,19 @@ export class ClTimesComponent {
     }
   }
 
-  clickVerProfissionais(time: Time) {}
+  clickVerProfissionais(time: Time) {
+    const dialogRef = this.dialog.open(CTimeProfissionaisComponent, {
+      disableClose: false,
+      autoFocus: false,
+      data: {
+        time,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(novaVersao => {
+      //if (novaVersao) this.getTimes();
+    });
+  }
 
   openDialogFormTime(time?: Time) {
     const dialogRef = this.dialog.open(CTimeFormComponent, {

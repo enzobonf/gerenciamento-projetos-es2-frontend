@@ -4,7 +4,7 @@
   (click)="click()"
   [ngClass]="{ selected: selected, notSelected: !selected }">
   <div class="icon">
-    <mat-icon [ngStyle]="{ color: '#003366' }">{{
+    <mat-icon [ngStyle]="{ color: '#303f9f' }">{{
       selected ? 'check_circle' : 'check_circle_outlined'
     }}</mat-icon>
   </div>
@@ -13,10 +13,10 @@
       <span
         class="text-font"
         *ngIf="id === -1"
-        [ngStyle]="{ color: '#003366' }"
+        [ngStyle]="{ color: '#303f9f' }"
         >{{ nome }}</span
       >
-      <span class="text-font" *ngIf="id !== -1" [ngStyle]="{ color: '#003366' }"
+      <span class="text-font" *ngIf="id !== -1" [ngStyle]="{ color: '#303f9f' }"
         >{{ id }} - {{ nome }} {{ sobrenome }}</span
       >
     </div>
