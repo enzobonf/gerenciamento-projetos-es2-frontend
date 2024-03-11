@@ -1,13 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CSoftwareVersoesComponent } from '../c-software-versoes/c-software-versoes.component';
 import { ApiService } from '../services/api.service';
-import { Software, StatusVersao } from '../model/software.interface';
 import { AppService } from '../services/app.service';
-import * as moment from 'moment';
-import { CSoftwareTecnologiasComponent } from '../c-software-tecnologias/c-software-tecnologias.component';
-import { CSoftwareFormComponent } from '../c-software-form/c-software-form.component';
 import { CDialogConfirmComponent } from '../c-dialog-confirm/c-dialog-confirm.component';
 import { Time } from '../model/time.interface';
 import { CTimeFormComponent } from '../c-time-form/c-time-form.component';

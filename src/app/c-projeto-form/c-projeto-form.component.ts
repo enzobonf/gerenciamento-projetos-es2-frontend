@@ -6,8 +6,6 @@ import {
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
 import { Projeto } from '../model/projeto.interface';
-import { Empresa } from '../model/empresa.interface';
-import { Software } from '../model/software.interface';
 import { ApiService } from '../services/api.service';
 import { AppService } from '../services/app.service';
 import { Cliente } from '../model/pessoa-fisica.interface';
