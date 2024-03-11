@@ -1,0 +1,108 @@
+.panel {
+  max-width: 30vw;
+
+  mat-dialog-content {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .panel {
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 740px) {
+  .panel {
+    max-width: 90vw;
+    max-height: 90vh !important;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.link-proprietario {
+  cursor: pointer;
+  color: #303f9f;
+}
+
+.filtros {
+  padding: 0;
+
+  .campos {
+    padding: 10px;
+
+    overflow: visible;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    c-open-filter-button {
+      margin-right: 10px;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .button {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.input-new {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+
+  mat-icon {
+    margin-right: 10px;
+  }
+}
+
+.new-select {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  padding: 7px 10px;
+  margin-bottom: 10px;
+
+  width: 100%;
+
+  ::ng-deep .mat-select-placeholder {
+    color: #000000de !important;
+    font-size: 1.4rem !important;
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.tipo-listagem-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.divisor {
+  border-bottom: 1px dashed #ccc;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+}

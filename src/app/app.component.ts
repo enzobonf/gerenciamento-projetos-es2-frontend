@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   loadingSubsCription: Subscription | undefined;
   loading: boolean = false;
 
-  title = 'T2 - ES1';
+  title = 'SGP - ES2';
 
   ngOnInit(): void {
     /* this.router

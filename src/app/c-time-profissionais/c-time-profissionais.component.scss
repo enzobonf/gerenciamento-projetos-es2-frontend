@@ -1,0 +1,25 @@
+/* .form {
+} */
+
+mat-dialog-content {
+  max-width: 120vw;
+}
+
+@media (max-width: 1100px) {
+  mat-dialog-content {
+    max-width: 160vw;
+  }
+}
+
+@media (max-width: 740px) {
+  mat-dialog-content {
+    max-width: 200vw;
+  }
+}
+
+.label {
+  color: rgba(0, 0, 0, 0.54);
+
+  margin-bottom: 5px;
+  font-size: 1.4rem !important;
+}

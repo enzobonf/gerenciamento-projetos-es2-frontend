@@ -71,6 +71,28 @@ export class ApiService {
     );
   }
 
+  async obterTimes() {
+    return firstValueFrom(this.http.get<any>(this.api + '/time').pipe(take(1)));
+  }
+
+  async cadastrarTime(time: any) {
+    return firstValueFrom(
+      this.http.post<any>(this.api + '/time', time).pipe(take(1))
+    );
+  }
+
+  async editarTime(id_time: number, time: any) {
+    return firstValueFrom(
+      this.http.patch<any>(this.api + `/time/${id_time}`, time).pipe(take(1))
+    );
+  }
+
+  async removerTime(id_profissional: number) {
+    return firstValueFrom(
+      this.http.delete<any>(this.api + `/time/${id_profissional}`).pipe(take(1))
+    );
+  }
+
   async getSoftwares() {
     return firstValueFrom(
       this.http.get<any>(this.api + '/softwares').pipe(take(1))

@@ -1,0 +1,27 @@
+<div class="panel">
+  <div class="header">
+    <h2 mat-dialog-title>Selecione os profissionais</h2>
+  </div>
+
+  <mat-dialog-content class="text-font">
+    <div class="row">
+      <div
+        class="col-12 nao-selecionar"
+        *ngFor="let profissional of profissionais">
+        <c-profissional-select-item
+          [id]="profissional.id"
+          [nome]="profissional.nome"
+          [sobrenome]="profissional.sobrenome"
+          [nome_especialidade]="profissional.especialidade.nome"
+          (handleClick)="clickProfissional(profissional)"
+          [selected]="profissional.selected">
+        </c-profissional-select-item>
+      </div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="close(undefined)">Fechar</button>
+    <button mat-button cdkFocusInitial (click)="onSave()">Selecionar</button>
+  </mat-dialog-actions>
+</div>

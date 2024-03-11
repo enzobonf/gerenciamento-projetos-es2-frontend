@@ -44,6 +44,13 @@ import {
   provideNgxMask,
 } from 'ngx-mask';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { ClTimesComponent } from './cl-times/cl-times.component';
+import { PTimesComponent } from './p-times/p-times.component';
+import { CTimeFormComponent } from './c-time-form/c-time-form.component';
+import { COpenFilterButtonComponent } from './c-open-filter-button/c-open-filter-button.component';
+import { ClProfissionalSelectModalComponent } from './cl-profissional-select-modal/cl-profissional-select-modal.component';
+import { CProfissionalSelectItemComponent } from './c-profissional-select-item/c-profissional-select-item.component';
+import { CTimeProfissionaisComponent } from './c-time-profissionais/c-time-profissionais.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +80,13 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     PProfissionaisComponent,
     ClProfissionaisComponent,
     CProfissionalFormComponent,
+    ClTimesComponent,
+    PTimesComponent,
+    CTimeFormComponent,
+    COpenFilterButtonComponent,
+    ClProfissionalSelectModalComponent,
+    CProfissionalSelectItemComponent,
+    CTimeProfissionaisComponent,
   ],
   imports: [
     BrowserModule,

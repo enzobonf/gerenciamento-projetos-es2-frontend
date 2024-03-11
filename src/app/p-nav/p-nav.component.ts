@@ -35,12 +35,12 @@ export class PNavComponent {
       {
         nome: 'Profissionais',
         link: '/profissionais',
-        icon: 'groups',
+        icon: 'person',
       },
       {
-        nome: 'Empresas',
-        link: '/empresas',
-        icon: 'apartment',
+        nome: 'Times',
+        link: '/times',
+        icon: 'groups',
       },
       {
         nome: 'Contratos',
