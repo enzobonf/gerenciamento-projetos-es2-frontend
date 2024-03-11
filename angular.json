@@ -113,7 +113,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/t1-es2-frontend/"
+            "baseHref": "/gerenciamento-projetos-es2-frontend/"
           }
         }
       }
