@@ -1,5 +1,5 @@
 export const environment = {
-  API_URL: 'http://localhost:3000',
+  API_URL: 'http://34.234.109.79:3000',
   firebaseConfig: {
     apiKey: 'AIzaSyD142ri2v4RSfXH5GlKWcppF2hAKtOVzIc',
     authDomain: 'gerenciamento-projetos-es2.firebaseapp.com',
